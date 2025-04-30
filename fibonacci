@@ -1,0 +1,112 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "id": "O_xSzPBMRxhn"
+      },
+      "outputs": [],
+      "source": [
+        "def fibonacci(n):\n",
+        "    if n<=2:\n",
+        "        print('please enter a number which is greater than 2!')\n",
+        "    else:\n",
+        "        fib = [1,1]\n",
+        "        ratio = [1]\n",
+        "        for i in range(n):\n",
+        "            fib_new = fib[i-1] + fib[i-2]\n",
+        "            fib.append(fib_new)\n",
+        "            ratio_new = fib[i-1] / fib_new\n",
+        "            ratio.append(ratio_new)\n",
+        "        print(fib)\n",
+        "        print(ratio)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "fibonacci(2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uWQGSdTPR7lB",
+        "outputId": "cb1e00cb-c282-4f3e-c17f-d54f84378c9d"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "please enter a number which is greater than 2!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "fibonacci(7)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "29Qf_M46SAvd",
+        "outputId": "3050dc5f-4361-4ba8-ec6d-09352c8f47e3"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 1, 2, 3, 2, 3, 5, 5, 5]\n",
+            "[1, 1.0, 0.3333333333333333, 0.5, 0.6666666666666666, 0.6, 0.4, 0.6]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "fibonacci(10)"
+      ],
+      "metadata": {
+        "id": "dZh7VMcJSB86",
+        "outputId": "f24f515f-b0c5-42f1-e3ce-2400fd322697",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 1, 2, 3, 2, 3, 5, 5, 5, 8, 10, 10]\n",
+            "[1, 1.0, 0.3333333333333333, 0.5, 0.6666666666666666, 0.6, 0.4, 0.6, 0.625, 0.5, 0.5]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
